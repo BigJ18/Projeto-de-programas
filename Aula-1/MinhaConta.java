@@ -8,11 +8,17 @@ public class MinhaConta {
   double saldo;
   
   
+  
 
-  void sacar(double valor){
-	  saldo = saldo - valor;
-      
-  }
+  boolean sacar(double valor){
+	  if (saldo >= valor && valor>0) {
+		saldo = saldo - valor;
+		return true;
+	  
+	  }
+		 return false;
+	  }
+     
   
   void depositar(double valor) {
 	    saldo = saldo + valor;
