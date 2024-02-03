@@ -1,0 +1,40 @@
+package br.edu.uea;
+
+import java.util.ArrayList;
+
+public class TesteContaBancariaList {
+
+	public static void main(String[] args) {
+		
+		ArrayList<MinhaConta> cadastro = new ArrayList<MinhaConta>();
+		
+		MinhaConta c1 = new MinhaConta();
+		c1.depositar(1000);
+		c1.cliente = new Cliente();
+		c1.cliente.nome = "Anna";
+	
+		MinhaConta c2 = new MinhaConta();
+		c2.depositar(2000);
+		c2.cliente = new Cliente();
+		c2.cliente.nome = "Maria";
+		
+		cadastro.add(c1);
+		cadastro.add(c2);
+		
+		for (int i = 0; i < cadastro.size(); i++) {
+			
+			MinhaConta conta = cadastro.get(i);
+			
+			System.out.println(conta.cliente.nome + " - " + conta.saldo);
+			
+		}
+		
+		for (MinhaConta conta : cadastro) {
+			
+		System.out.println(conta.cliente.nome + " - " + conta.saldo);
+			
+		}
+		
+	}
+	
+}
