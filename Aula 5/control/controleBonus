@@ -1,0 +1,17 @@
+package br.edu.uea.control;
+
+import br.edu.uea.model.funcionario2;
+
+public class controleBonus {
+	
+	private int total;
+	
+	public int getTotal() {
+		return total;
+	}
+
+	public void adicionarBonus(funcionario2 funcionario) {
+		total += funcionario.getBonus();
+	}
+	
+}
